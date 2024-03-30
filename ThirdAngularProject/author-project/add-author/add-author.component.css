@@ -1,0 +1,33 @@
+.part-2 {
+  background: #cee5f2;
+  padding: 57px 67px;
+}
+.part-2-2 {
+  border: 3px solid #ffffff;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 43px 96px 0 100px;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+}
+.button-1 {
+  width: 216px;
+  border: 0;
+  background-color: #cee5f2;
+  margin-left: 450px;
+}
+.button-2{
+    width: 216px;
+    background-color: #52b788;
+    border: 0;
+    border-radius: 10px;
+}
+.textArea{
+    margin-top: 38px;
+    margin-bottom: 12px;
+}
+

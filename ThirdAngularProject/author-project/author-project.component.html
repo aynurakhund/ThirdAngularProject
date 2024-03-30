@@ -1,0 +1,52 @@
+<div class="nav">
+  <div class="navbar-1">
+    <a routerLink="">Books</a>
+    <a routerLink="author">authors</a>
+  </div>
+  <div class="navbar-2">
+    <button class="btn-1">Sign In</button>
+    <button class="btn-2">Sign Up</button>
+  </div>
+</div>
+<div class="part-1">
+  <div class="part-1-1">
+    <div class="part1-head">
+      <div class="logo">
+        <h1>AUTHOR PAGE</h1>
+        <p>
+          To be a good <span>Author</span>, you must know good
+          <span>Authentication</span>.
+        </p>
+      </div>
+      <button routerLink="/author" routerLinkActive="router-link-active">
+        Create
+      </button>
+    </div>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Birth Date</th>
+            <th>Birth Place</th>
+            <th>Description</th>
+            <th>Books</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of arr">
+            <td>{{ item.firstName }} {{ item.lastName }}</td>
+            <td>{{ item.birthDate }}</td>
+            <td>{{ item.birthPlace }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.books }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+

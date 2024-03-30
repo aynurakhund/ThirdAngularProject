@@ -1,0 +1,95 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  width: 100%;
+  height: 68px;
+  color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar-1 {
+  margin-top: 21px;
+  margin-left: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 24px;
+}
+.navbar-2 {
+  margin-top: 21px;
+  margin-right: 97px;
+  display: flex;
+  flex-direction: row;
+}
+.navbar-1 a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  border: 0;
+  width: 63px;
+  height: 30px;
+  border-radius: 5px;
+}
+.btn-1 {
+  background: #5a45f2;
+}
+.btn-2 {
+  color: black;
+  background-color: #ffffff;
+}
+.part-1 {
+  width: 100%;
+  height: 100%;
+  background: #cee5f2;
+  padding: 57px 67px;
+}
+.part-1-1 {
+  border: 3px solid #ffffff;
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+}
+.part1-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 83px 96px 33px 100px;
+}
+.part1-head  span {
+  color: #52b788;
+}
+.table {
+  padding: 0 47px 50px 47px;
+}
+.table thead {
+  border-radius: 5px 5px 0 0;
+  background: #52b788;
+  color: white;
+  border: 1px solid #52b788;
+}
+.table tr:nth-child(even){background-color: rgb(61, 63, 66);color: #ffffff;}
+.table th,
+td {
+  width: 240px;
+  height: 36px;
+}
+.part1-head  p {
+  width: 380px;
+  font-size: 16px;
+}
+.part1-head  button {
+  width: 206px;
+  height: 50px;
+  background-color: #52b788;
+  color: #ffffff;
+  border: 0;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 32px;
+}

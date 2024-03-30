@@ -1,0 +1,88 @@
+<div class="part-2">
+  <div class="part-2-2">
+    <h1>Create Author</h1>
+    <form [formGroup]="authorForm">
+      <div class="inputs">
+        <input
+          type="text"
+          placeholder="Firstname"
+          name="firstName"
+          formControlName="firstName"
+        />
+        <div
+          class="alert alert-danger p-3"
+          *ngIf="
+            !authorForm.get('firstName').valid &&
+            authorForm.get('firstName').touched
+          "
+        >
+          Firstname is required.
+        </div>
+        <input
+          type="text"
+          placeholder="Lastname"
+          name="lastName"
+          formControlName="lastName"
+        />
+        <div
+          class="alert alert-danger p-3"
+          *ngIf="
+            !authorForm.get('lastName').valid &&
+            authorForm.get('lastName').touched
+          "
+        >
+          Lastname is required.
+        </div>
+
+        <div formArrayName="books">
+          <div *ngFor="let books of books.controls; let i = index">
+            <div formGroupName="{{i}}" class="p-1">
+              <input
+                type="text"
+                placeholder="Books"
+                name="books"
+                formControlName="book"
+              />
+              <button (click)="removeBook(i)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="alert alert-danger p-3"
+          *ngIf="
+            !authorForm.get('books').valid && authorForm.get('books').touched
+          "
+        >
+          Book is required.
+        </div>
+      </div>
+
+      <button class="button-1" (click)="addBook()">+add</button>
+      <div class="inputs">
+        <input
+          type="text"
+          placeholder="Birthdate"
+          name="birthDate"
+          formControlName="birthDate"
+        />
+        <input
+          type="text"
+          placeholder="Birth Place"
+          name="birthPlace"
+          formControlName="birthPlace"
+        />
+      </div>
+      <div class="textArea">
+        <textarea
+          name="description"
+          placeholder="Description"
+          cols="30"
+          rows="10"
+          type="text"
+          formControlName="description"
+        ></textarea>
+      </div>
+      <button class="button-2" [disabled]="!click()" (click)="onSubmit()">Create</button>
+    </form>
+  </div>
+</div>
